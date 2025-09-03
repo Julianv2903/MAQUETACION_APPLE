@@ -5,7 +5,7 @@ import "./App.css";
 function App() {
   // Objeto con la información
   const data = {
-    titulo: "Notas importantes de Apple",
+    titulo: "",
     notas: [
       "Apple Intelligence está disponible en versión beta como parte de una actualización de iOS 18 en todos los modelos de iPhone 16, en el iPhone 15 Pro y en el iPhone 15 Pro Max, con Siri y el idioma del dispositivo configurados en el mismo idioma compatible. Los idiomas compatibles incluyen inglés, francés, alemán, italiano, portugués (Brasil), español, japonés, coreano y chino (simplificado). Se irán agregando otros idiomas, como vietnamita, en el transcurso del año. Algunas funcionalidades podrían no estar disponibles en todas las regiones o idiomas.",
       "La funcionalidad Modo Cine está disponible en los modelos de iPhone 13, iPhone 14 y iPhone 15, y en el iPhone 16, iPhone 16 Plus, iPhone 16 Pro y iPhone 16 Pro Max. La funcionalidad Modo Acción está disponible en los modelos de iPhone 13 mini, iPhone 14 y iPhone 14 Plus, iPhone 15 y iPhone 15 Plus, iPhone 16 y iPhone 16 Plus, iPhone 16 Pro y iPhone 16 Pro Max. La funcionalidad Mezcla de Audio está disponible en el iPhone 16, iPhone 16 Plus, iPhone 16 Pro y iPhone 16 Pro Max.",
@@ -33,7 +33,6 @@ function App() {
   return (
     <div className="container">
       <h1 className="title">{data.titulo}</h1>
-      <ol className="title">{data.avisos}</ol>
       <ol className="list">
         {data.notas.map((nota, index) => (
           <li key={index} className="list-item">
@@ -41,6 +40,7 @@ function App() {
           </li>
         ))}
       </ol>
+      <ol className="title">{data.avisos}</ol>
     </div>
   );
 }
